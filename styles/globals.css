@@ -1,3 +1,5 @@
+@import url('https://bloomstack.github.io/styleguide/styleguide.0.1.0.css');
+
 html,
 body {
   padding: 0;
@@ -21,4 +23,41 @@ a:hover {
 
 p{
   line-height: 200%;
+}
+
+div{
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+th {
+  padding-top: 5%;
+}
+
+td {
+  padding-left: 40%;
+  padding-top: 5%;
+  width: 90%;
+}
+h2{
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.drop{
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0; 
+  max-height: 0; 
+  background: #fff; 
+  border-radius: 0 0 3px 3px; 
+  border-left: 2px dotted #ccc;
+}
+.drop li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: auto; 
+  border-top: 1px dotted #ccc;
+  cursor: pointer;
 }

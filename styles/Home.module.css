@@ -73,6 +73,10 @@
   max-width: 800px;
 }
 
+.card_container {
+  float: left;
+}
+
 .card {
   margin: 1rem;
   padding: 1.5rem;
