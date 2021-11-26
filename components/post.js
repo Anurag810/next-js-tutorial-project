@@ -2,10 +2,19 @@ import style from '../styles/profile.module.css'
 import Link from 'next/link'
 import utilStyles from '../styles/utils.module.css'
 import { useState, useEffect } from 'react'
+import {useRouter} from 'next/router'
 
 
 const Post = ({post, title, post_id, user_id ,for_dashboard})  => {
-    const [post_vissiblity, set_post_vissiblity] = useState("None")
+    let vissibility = "None"
+    if(!for_dashboard){
+        let route = useRouter()
+        let id = route.asPath.split("#")[1]
+        if(id == post_id) {
+            vissibility = "block"
+        }
+    }
+    const [post_vissiblity, set_post_vissiblity] = useState(vissibility)
     const [comments, set_comments] = useState([])
 
     useEffect(() => {
@@ -15,6 +24,10 @@ const Post = ({post, title, post_id, user_id ,for_dashboard})  => {
                 .then(data => set_comments(data));
         }
     }, []);
+
+    let url = '/posts/user-posts?user_id='+user_id+'#'+post_id
+
+    
 
     return (<>
         <div id={post_id} className={!for_dashboard ? style.card + ' elevate': ''}>
@@ -35,8 +48,7 @@ const Post = ({post, title, post_id, user_id ,for_dashboard})  => {
             )}
             { !for_dashboard ? (
                 <h2 className={utilStyles.headingMd}>{title}</h2>
-            ) : (
-                <Link href={{ pathname: '/posts/user-posts', query: { user_id: user_id } }}>
+            ) :  (<Link href={url}>
                     <a>{title}</a>
                 </Link>
             )}

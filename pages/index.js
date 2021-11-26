@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Cards from '../components/cards'
+import Layout from '../components/layout'
 import style from '../styles/Home.module.css'
 
-  
 export const getStaticProps = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/users')
   const users = await res.json()
@@ -21,7 +21,7 @@ const Home = ({users}) => {
     let row_md = 1
     let lg_class = ''
     let md_class = ''
-  return (<>   
+  return (<Layout home={true}>   
       <Head>
         <title>My book</title>
       </Head>
@@ -44,7 +44,7 @@ const Home = ({users}) => {
               </div>)
             })}
         </div>
-    </>)
+    </Layout>)
 }
 
 export default Home;

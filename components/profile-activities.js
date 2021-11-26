@@ -29,7 +29,7 @@ const ProfileActivities = ({user_id})  => {
             <h4>Notifications</h4>
             {get_elements(notification, undefined, "Notification")}
         </div>
-        <div className={" bg-primary p-1  pv-1 lg-pos-2_1 sm-pos-1_2 elevate " + style.card}>
+        <div className={" bg-primary p-1  pv-1  sm-pos-1_2  lg-pos-2_1 elevate " + style.card}>
             <h4>Posts</h4>
             {get_elements(posts, user_id, 'Post')}
             <div style={{float:'right'}}>

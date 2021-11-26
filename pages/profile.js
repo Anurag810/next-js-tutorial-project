@@ -1,7 +1,9 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import ProfileInfo from '../components/profile-info'
 import ProfileActivities from '../components/profile-activities'
 import ProfileAlbum from '../components/profile-album'
+import Layout from '../components/layout'
 
 export const getServerSideProps = async (context) => {    
     const {param, req, resp, query} = context
@@ -17,7 +19,7 @@ export const getServerSideProps = async (context) => {
 
 const profile = ({data, user_id}) => {
     console.log(user_id)
-    return (<>
+    return (<Layout home={true}>
         <Head>
             <title>Profile</title>
         </Head>
@@ -29,10 +31,12 @@ const profile = ({data, user_id}) => {
                 <ProfileActivities user_id={user_id}/>
             </div>    
             <div>
-                <ProfileAlbum user_id={user_id}/>
+                <center>
+                    <ProfileAlbum user_id={user_id}/>
+                </center>
             </div>    
         </div> 
-    </>)
+    </Layout>)
 };
 
 export default profile

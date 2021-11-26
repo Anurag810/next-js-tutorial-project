@@ -1,13 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import utilStyles from '../styles/utils.module.css'
+import LayoutSideBar from './navbar'
 import Link from 'next/link'
 
 const name = 'Anurag Mishra'
 export const siteTitle = 'This is me'
 
-export default function Layout({ children}) {
-  return (
+export default function Layout({ children, home}) {
+  return (<div className="flex-fluid p-modern ">
+    <LayoutSideBar/>
     <div className="elevate bg-contrast ml-5 mr-5">
       <Head>
         <link rel="icon" href="/favicon.ico" />
@@ -16,6 +18,9 @@ export default function Layout({ children}) {
           content="Still Learning"
         />
       </Head>
+      { home ? (
+                <></>
+            ) : (
       <header>
         <center>
           <Link href="/">
@@ -37,13 +42,17 @@ export default function Layout({ children}) {
           </h2>
       </center>
       </header>
+      )}
       <main>{children}</main>
-    
-      <div className='flex ml-2'>
-        <Link href="/">
-          <h6><a>← Back to home</a></h6>
-        </Link>
-      </div>
+      { home ? (
+          <></>
+        ) : (
+        <div className='flex ml-2'>
+          <Link href="/">
+            <h6><a>← Back to home</a></h6>
+          </Link>
+        </div>
+      )}
     </div>
-  )
+  </div>)
 }

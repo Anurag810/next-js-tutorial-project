@@ -17,9 +17,7 @@ const ProfileAlbum = ({user_id, show_all})  => {
     const [image, set_image] = useState("/images/profile.jpg")
     const toggle_something = () =>{
         console.log("hello")
-        display=='block'? set_display('none') :set_display('block')
-
-        
+        display=='block'? set_display('none') :set_display('block')        
     }
 
     
@@ -32,7 +30,7 @@ const ProfileAlbum = ({user_id, show_all})  => {
     let lg_class = ''
     let md_class = ''
     return (<>
-    <div>
+    <div> 
     <span className=" pt-1 -mt-3 fw-900 z-1000"style={{float: 'right'}}
         onClick={() => {toggle_something()}}
         style = {{display: `${display}`, position: 'fixed', top: "15%", right: "25%"}}>
@@ -118,17 +116,18 @@ const ProfileAlbum = ({user_id, show_all})  => {
                     }
                     md_class = 'md-pos-'+col_md+'_'+row_md+ ' ';
                     return <Link href='#'>
-                            <div className={'bg-primary p-1 elevate pv-1 '+ lg_class + md_class +style.card}
-                            ><center> 
-                                <Image
-                                    priority
-                                    src="/images/album.png"
-                                    height={144}
-                                    width={144}
-                                    alt={album.title}
-                                />
-                            <div>{album.title}</div>
-                        </center></div>
+                            <center>
+                                <div className={'bg-primary p-1 elevate pv-1 '+ lg_class + md_class +style.card}
+                                >
+                                    <Image
+                                        priority
+                                        src="/images/album.png"
+                                        height={144}
+                                        width={144}
+                                        alt={album.title}
+                                    />
+                                <div>{album.title}</div>
+                            </div></center>
                     </Link>
             })}
         </div>
