@@ -39,7 +39,7 @@ const Home = ({users}) => {
                   row_md = row_md + 1
               }
               md_class = 'md-pos-'+col_md+'_'+row_md+ ' ';
-              return (<div className={'bg-primary p-1  elevate pv-1 '+ lg_class + md_class +style.card}>
+              return (<div key={user.id} className={'bg-primary p-1  elevate pv-1 '+ lg_class + md_class +style.card}>
                 <Cards name={user.name} id={user.id}/>
               </div>)
             })}
