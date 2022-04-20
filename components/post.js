@@ -7,8 +7,8 @@ import {useRouter} from 'next/router'
 
 const Post = ({post, title, post_id, user_id ,for_dashboard})  => {
     let vissibility = "None"
+    let route = useRouter()
     if(!for_dashboard){
-        let route = useRouter()
         let id = route.asPath.split("#")[1]
         if(id == post_id) {
             vissibility = "block"
@@ -48,7 +48,7 @@ const Post = ({post, title, post_id, user_id ,for_dashboard})  => {
             )}
             { !for_dashboard ? (
                 <h2 className={utilStyles.headingMd}>{title}</h2>
-            ) :  (<Link className="" href={url}>
+            ) :  (<Link className="" href={url} passHref>
                     <a>{title}</a>
                 </Link>
             )}
