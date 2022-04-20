@@ -30,7 +30,7 @@ const ProfileAlbum = ({ user_id, show_all }) => {
     let md_class = ''
     return (<>
         <div>
-            <span className=" pt-1 -mt-3 fw-900 z-1000" style={{ float: 'right' }}
+            <span className=" pt-1 -mt-3 fw-900 z-1000" 
                 onClick={() => { toggle_something() }}
                 style={{ display: `${display}`, position: 'fixed', top: "15%", right: "25%" }}>
                 <h2>X</h2>
