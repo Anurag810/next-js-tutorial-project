@@ -23,7 +23,7 @@ export default function Layout({ children, home}) {
           <></>
         ) : (
         <div className='flex ml-2 mb-1 pv-2h'>
-          <Link href="/">
+          <Link href="/" passHref>
             <h6><a>← Back to home</a></h6>
           </Link>
         </div>
