@@ -23,7 +23,7 @@ const profile = ({data, user_id}) => {
         <Head>
             <title>Profile</title>
         </Head>
-        <div className='flex-fluid bg-contrast p-modern p sm-p md-p-2 lg-p-1 xl-p  mr-5 '>
+        <div className='flex-fluid bg-contrast p-modern sm-p md-p-2 lg-p-1 xl-p  mr-5 '>
             <div >
                 <ProfileInfo data={data} />
             </div>

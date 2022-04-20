@@ -24,7 +24,7 @@ const ProfileActivities = ({user_id})  => {
             
     }, []) 
 
-    return (<div className = 'bg-primary lg-grid-3x1 sm-grid-1x3 round overflow-hidden elevate'>
+    return (<div className = 'bg-primary lg-grid-3x1 sm-grid-1x3 round overflow-hidden mb-1 elevate'>
         <div className={" bg-primary p-1  pv-1 lg-pos-1_1 sm-pos-1_1 elevate " + style.card}>
             <h4>Notifications</h4>
             {get_elements(notification, undefined, "Notification")}

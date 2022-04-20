@@ -23,7 +23,7 @@ const ProfileTodos = ({user_id, show_all})  => {
                     <div><input type="checkbox" checked={todo.completed}  value=""/> {todo.title}</div>
                 </div>
                 {show_all ? (
-                    <div className="mr-3 -mt-5" style={{float: 'right'}}>
+                    <div className="mr-3 -mt-3" style={{float: 'right'}}>
                         <span className={todo.completed ?'c-semantic-primary': 'c-semantic-success'}>
                             {todo.completed ? 'Completed' : 'Pending'}
                         </span>

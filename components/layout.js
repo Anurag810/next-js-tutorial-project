@@ -18,36 +18,11 @@ export default function Layout({ children, home}) {
           content="Still Learning"
         />
       </Head>
-      { home ? (
-                <></>
-            ) : (
-      <header>
-        <center>
-          <Link href="/">
-            <a>
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt={name}
-              />
-            </a>
-          </Link>
-          <h2 className={utilStyles.headingLg}>
-            <Link href="/">
-              <a className={utilStyles.colorInherit}>{name}</a>
-            </Link>
-          </h2>
-      </center>
-      </header>
-      )}
       <main>{children}</main>
       { home ? (
           <></>
         ) : (
-        <div className='flex ml-2'>
+        <div className='flex ml-2 mb-1 pv-2h'>
           <Link href="/">
             <h6><a>← Back to home</a></h6>
           </Link>

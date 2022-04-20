@@ -3,8 +3,8 @@ import Image from 'next/image'
 import utilStyles from '../styles/utils.module.css'
 
 const ProfileInfo = ({data})  => {
-    return (<div className='bg-primary lg-grid-3x1 sm-grid-1x2 round overflow-hidden elevate'>
-            <div className={"bg-primary p-1 lg-p-2 pv-1 lg-pos-1_1 sm-pos-1_1 elevate " +style.card}>
+    return (<div className='bg-primary lg-grid-3x1 sm-grid-1x2 round overflow-hidden elevate mb-1'>
+            <div className={"bg-primary p-1 lg-p-2 pv-1 lg-pos-1_1 sm-pos-1_1 elevate" +style.card}>
                 <center>
                     <Image
                     priority

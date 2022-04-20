@@ -16,7 +16,6 @@ const ProfileAlbum = ({user_id, show_all})  => {
     const [display, set_display] = useState('none')
     const [image, set_image] = useState("/images/profile.jpg")
     const toggle_something = () =>{
-        console.log("hello")
         display=='block'? set_display('none') :set_display('block')        
     }
 
@@ -96,7 +95,7 @@ const ProfileAlbum = ({user_id, show_all})  => {
     </div>
 
 
-    <div className='flex bg-primary'>
+    <div className='flex bg-primary pv-2h'>
             <center><h4>Albums</h4></center>
             <div className = {'bg-primary lg-grid-4x'+no_of_row+' md-grid-2x'+ no_of_row_md +' round overflow-hidden elevate'}
                 onClick={() => {toggle_something()} }
@@ -116,20 +115,21 @@ const ProfileAlbum = ({user_id, show_all})  => {
                     }
                     md_class = 'md-pos-'+col_md+'_'+row_md+ ' ';
                     return <Link href='#'>
-                            <center>
-                                <div className={'bg-primary p-1 elevate pv-1 '+ lg_class + md_class +style.card}
-                                >
-                                    <Image
-                                        priority
-                                        src="/images/album.png"
-                                        height={144}
-                                        width={144}
-                                        alt={album.title}
-                                    />
+                        <center>
+                            <div className={'bg-primary p-1 elevate pv-1 '+ lg_class + md_class +style.card}>
+                                <center><Image
+                                    priority
+                                    src="/images/album.png"
+                                    height={144}
+                                    width={144}
+                                    alt={album.title}
+                                /></center>
                                 <div>{album.title}</div>
-                            </div></center>
+                            </div>
+                        </center>
                     </Link>
-            })}
+                })
+            }
         </div>
     </div></>)
 }

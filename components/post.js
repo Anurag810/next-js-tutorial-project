@@ -48,7 +48,7 @@ const Post = ({post, title, post_id, user_id ,for_dashboard})  => {
             )}
             { !for_dashboard ? (
                 <h2 className={utilStyles.headingMd}>{title}</h2>
-            ) :  (<Link href={url}>
+            ) :  (<Link className="" href={url}>
                     <a>{title}</a>
                 </Link>
             )}

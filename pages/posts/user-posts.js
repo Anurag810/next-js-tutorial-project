@@ -22,8 +22,8 @@ const UserPosts = ({data, user_id})  => {
         <Head>
             <title>User Posts</title>
         </Head>
-          <div className="flex-fluid bg-contrast p-modern p sm-p md-p-2 lg-p-1 xl-p">
-          <div className="bg-primary"> 
+          <div className="flex-fluid bg-contrast p-modern sm-p md-p-2 lg-p-1 xl-p">
+          <div className="bg-primary pv-2h"> 
           {data.map(post => (
             
             <Post post={post.body} title={post.title} post_id={post.id} user_id={user_id}/>  

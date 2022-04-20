@@ -19,7 +19,7 @@ const album = ({user_id}) => {
         <Head>
             <title>Albums</title>
         </Head>
-        <div className='flex-fluid bg-contrast p-modern p sm-p md-p-2 lg-p-1 xl-p'>
+        <div className='flex-fluid bg-contrast p-modern sm-p md-p-2 lg-p-1 xl-p'>
                 <ProfileAlbum user_id={user_id} show_all={true}/>
         </div>
     </Layout></>)
